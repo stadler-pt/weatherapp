@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Steven Adler">
+        <meta name="description" content="An examplary weather app created with the OpenWeatherMap API">
+        <meta name="keywords" content="weather app, API, asynchronous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        
+        <title>Weather App Example || Steven Adler</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+    </head>
+    <body>
+        <div id = "app">
+            <div>    
+                <h1>Weather Journal App</h1>
+                <div>
+                    <label for="zip">Enter Zipcode here</label>
+                    <input 
+                        type="text" 
+                        id="zip" 
+                        placeholder="Enter zip code here"
+                    >
+                    <label>Select country:
+                        <select name="country" id="country">
+                          <option value="US">USA</option>
+                          <option value="DE">Germany</option>
+                          <option value="GB">Britain</option>
+                          <option value="JP">Japan</option>
+                          <option value="CN">China</option>
+                          <option value="IN">India</option>
+                          <option value="ES">Spain</option>
+                          <option value="BR">Brazil</option>
+                        </select>
+                      </label>
+                </div>
+                <div>
+                    <label for="feelings">
+                        How are you feeling today?
+                    </label>
+                    <textarea 
+                        class = "myInput" 
+                        id = "feelings" 
+                        placeholder = "How are you feeling?" 
+                        rows = "3" 
+                        cols = "30"
+                    ></textarea>
+                    <button id="generate" type = "submit">
+                        Generate
+                    </button>
+                </div>
+                <div class ="entry">
+                    <div class = "title">
+                        Search Result
+                    </div>
+                    <img id="weatherIcon" alt="Current Weather">
+                    <div id = "entryHolder">
+                        <div id = "date"></div> 
+                        <div id = "temp"></div>
+                        <div id = "content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="recent">
+                <p>Recent Searches:</p>
+                </br>
+                <div id="searches">
+                </div>
+            </div>
+        </div>
+
+    <script src="./app.js" type="text/javascript"></script>
+    </body>
+</html>
