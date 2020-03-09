@@ -17,7 +17,7 @@ app.use(cors())
 app.use(express.static("weather"))
 
 // Start server
-const port = 8000
+const port = 8001
 const server = app.listen(port, ()=>{
     console.log(`running on localhost: ${port}`)
 })
